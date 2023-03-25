@@ -44,4 +44,27 @@ void adivinar()
     }
 }
 
-adivinar();
+void mayor_menor()
+{
+    int mayor = 0;
+    int menor = 10;
+    int numero = 0;
+    Random random = new();
+    for(int i=0; i<5; i++)
+    {
+        numero = random.Next(10);
+        Console.WriteLine(numero);
+        if (numero > mayor)
+        {
+            mayor = numero;
+        }
+        if (numero < menor)
+        {
+            menor = numero;
+        }
+    }
+    Console.WriteLine("El mayor es " + mayor);
+    Console.WriteLine("El menor es " + menor);
+}
+
+mayor_menor();
